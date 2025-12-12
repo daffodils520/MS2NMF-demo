@@ -27,3 +27,7 @@ MS2NMF/
    - The `demo/` folder provides a pre-generated optimized fragment-intensity matrix (`demo_optimized_fragment_matrix.csv`) used as the direct input for NMF factorization.
 The full preprocessing workflow is described in the manuscript, and all related
 code and data will be released upon publication.
+
+## Contact
+
+For questions regarding the dataset or workflow,please contact shuchenlan@simm.ac.cn(Chenlan Shu) or yuzhuohao@simm.ac.cn(Zhuohao Yu)
