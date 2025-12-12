@@ -1,7 +1,7 @@
 # MS2NMF-demo
 
 
-![描述文字](images/ms2nmf.png)
+![描述文字](images/ms2nmf-.png)
 
 
 MS2NMF (Submission Version)
