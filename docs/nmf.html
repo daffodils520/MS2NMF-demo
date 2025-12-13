@@ -36,27 +36,27 @@
     .kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,"Liberation Mono","Courier New",monospace;background:#f8f9fa;border:1px solid #e9ecef;border-bottom-width:2px;border-radius:.25rem;padding:.1rem .35rem;}
     .result-list li{margin:.25rem 0;}
 
-    /* ✅ Upload widget */
+    
     .input-group > .form-control[readonly] { background-color: #fff; }
-    /* 控制下拉菜单整体 */
+    
 .dropdown-menu {
-  min-width: 220px;       /* 保证有足够宽度，不会被文字撑破 */
-  border-radius: 6px;     /* 圆角更美观 */
-  overflow: hidden;       /* 避免 hover 颜色超出边框 */
+  min-width: 220px;       
+  border-radius: 6px;     
+  overflow: hidden;       
 }
 
-/* 控制下拉项 */
+
 .dropdown-menu .dropdown-item {
   font-size: 15px;
   font-weight: bold;
   font-family: "Microsoft YaHei", Arial, sans-serif;
   color: #1a3d7c;
-  white-space: nowrap;    /* 避免换行导致错位 */
+  white-space: nowrap;    
 }
 
-/* hover 样式（背景色不会溢出） */
+
 .dropdown-menu .dropdown-item:hover {
-  background-color: #e6f0ff;  /* 自定义 hover 背景色 */
+  background-color: #e6f0ff; 
   color: #0d2a57;
 }
 
@@ -64,7 +64,7 @@
 </head>
 <body>
 
-  <!-- ✅ 顶部导航栏 -->
+  
   <nav class="navbar navbar-expand-lg" style="background-color:#2b78d4;">
     <img src="images/logo.png" alt="MS2NMF logo">
     <span class="brand">MS2NMF</span>
@@ -88,11 +88,11 @@
     </div>
   </nav>
 
-  <!-- ✅ 页面主体 -->
+  
   <div class="container mt-4">
     <h2 class="mb-4 text-center" style="color:#1a3d7c;">NMF Decomposition & Visualization</h2>
 
-    <!-- Ⅰ. Evaluation -->
+    
     <div class="card mb-4">
       <div class="card-header"><h5 class="mb-0">Evaluation: Select Appropriate components k</h5></div>
       <div class="card-body">
@@ -132,7 +132,7 @@
       </div>
     </div>
 
-    <!-- Ⅱ. Decomposition -->
+    
     <div class="card mb-4">
       <div class="card-header"><h5 class="mb-0">NMF Decomposition: Generate matrix W and H</h5></div>
       <div class="card-body">
@@ -168,7 +168,7 @@
       </div>
     </div>
 
-    <!-- Ⅲ. UMAP Visualization -->
+    
     <div class="card mb-5">
       <div class="card-header"><h5 class="mb-0">UMAP Visualization</h5></div>
       <div class="card-body">
@@ -236,7 +236,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
   (function(){
-    // ✅ Bind upload inputs
+   
     document.querySelectorAll('.file-input').forEach(input => {
       input.addEventListener('change', function () {
         const fileNameInput = this.closest('.input-group').querySelector('.file-name');
@@ -244,11 +244,11 @@
       });
     });
 
-    // ✅ Only keep clean filenames (no duplicates)
+    
 function normalizeFiles(res){
   const files = {};
   Object.keys(res||{}).forEach(k=>{
-    // 只保留 *_filename
+    
     if(k.endsWith('_filename')){
       const base = k.replace(/_filename$/,'');
       files[base] = res[k];
@@ -299,7 +299,7 @@ function normalizeFiles(res){
     }
     function idle($btn){ if($btn) $btn.prop('disabled', false); }
 
-    // Evaluation
+    
     $('#evalForm').on('submit', function(e){
       e.preventDefault();
       const $btn = $('#evalBtn'), $box = $('#eval_result');
@@ -316,7 +316,7 @@ function normalizeFiles(res){
         .always(()=> idle($btn));
     });
 
-    // Decomposition
+    
     $('#decompForm').on('submit', function(e){
       e.preventDefault();
       const $btn = $('#decompBtn'), $box = $('#decomp_result');
@@ -333,7 +333,7 @@ function normalizeFiles(res){
         .always(()=> idle($btn));
     });
 
-    // UMAP Visualization
+    
     $('#umapCustomForm').on('submit', function(e){
       e.preventDefault();
       const $btn = $('#umapCustomBtn'), $box = $('#umap_custom_result');
@@ -357,6 +357,7 @@ function normalizeFiles(res){
   </script>
 </body>
 </html>
+
 
 
 
